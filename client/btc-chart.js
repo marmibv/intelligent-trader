@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Line} from 'react-chartjs-2';
 
@@ -42,9 +42,14 @@ class BTCChart extends React.Component {
     if (exacoinAPIResult) {
       if (exacoinAPIResult.result) {
         const exacoinChartData = JSON.parse(exacoinAPIResult.result);
-        const dataCloseLength = exacoinChartData.data_close.length;
+        const dataDateList = [];
+        exacoinChartData.data_date.forEach((data_date) => {
+          const format = 'MM/DD HH:mm:ss';
+          const updateDataDate = moment.tz(data_date, 'Asia/Bangkok').format(format);
+          dataDateList.push(updateDataDate);
+        })
         var data = {
-          labels: exacoinChartData.data_date,
+          labels: dataDateList,
           datasets: [{
             label: 'BTC Value',
             fill: true,

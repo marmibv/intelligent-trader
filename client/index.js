@@ -12,7 +12,10 @@ import BTCChart from './btc-chart';
 class BittrexComponent extends React.Component {
   constructor() {
     super();
-    const marketList = marketListJSON.map((market) => {
+    let marketList =  marketListJSON.filter((market) => {
+      return market.BaseCurrency === 'BTC';
+    });
+    marketList = marketList.map((market) => {
       const combinedName = market.MarketCurrencyLong + ' (' + market.MarketCurrency + ')';
       market['combinedName'] = combinedName;
       return market
