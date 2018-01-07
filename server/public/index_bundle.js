@@ -79989,14 +79989,15 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var BTCChart = function (_React$Component) {
   _inherits(BTCChart, _React$Component);
 
-  function BTCChart() {
+  function BTCChart(props) {
     _classCallCheck(this, BTCChart);
 
-    var _this = _possibleConstructorReturn(this, (BTCChart.__proto__ || Object.getPrototypeOf(BTCChart)).call(this));
+    var _this = _possibleConstructorReturn(this, (BTCChart.__proto__ || Object.getPrototypeOf(BTCChart)).call(this, props));
 
     _this.state = {
       intervalId: null,
-      exacoinAPIResult: null
+      exacoinAPIResult: null,
+      selectedMarket: props.selectedMarket
     };
     _this.getExacoinAPIResult = _this.getExacoinAPIResult.bind(_this);
     return _this;
@@ -80005,7 +80006,7 @@ var BTCChart = function (_React$Component) {
   _createClass(BTCChart, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-
+      this.getExacoinAPIResult();
       var intervalId = setInterval(this.getExacoinAPIResult, 30000);
       this.setState({ intervalId: intervalId });
     }
@@ -80014,7 +80015,7 @@ var BTCChart = function (_React$Component) {
     value: function getExacoinAPIResult() {
       var _this2 = this;
 
-      _axios2.default.get('/' + this.props.selectedMarket.MarketName).then(function (response) {
+      _axios2.default.get('/' + this.state.selectedMarket.MarketName).then(function (response) {
         _this2.setState({ exacoinAPIResult: response.data });
       });
     }
@@ -80025,7 +80026,21 @@ var BTCChart = function (_React$Component) {
     }
   }, {
     key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {}
+    value: function componentWillReceiveProps(nextProps) {
+      var _this3 = this;
+
+      var selectedMarket = this.state.selectedMarket;
+
+      if (nextProps.selectedMarket.MarketName !== selectedMarket.MarketName) {
+        clearInterval(this.state.intervalId);
+        selectedMarket.marketName = nextProps.selectedMarket.MarketName;
+        this.setState({ selectedMarket: selectedMarket, exacoinAPIResult: null }, function () {
+          _this3.getExacoinAPIResult();
+          var intervalId = setInterval(_this3.getExacoinAPIResult, 30000);
+          _this3.setState({ intervalId: intervalId });
+        });
+      }
+    }
   }, {
     key: 'renderChart',
     value: function renderChart() {

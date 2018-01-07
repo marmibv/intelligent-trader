@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
 
 app.get('/:currency', (req, res) => {
   var currency = req.params.currency;
-  client.get(`https://signal3.exacoin.co/get_signal?currency=${currency}&t=1515211609371`, args, (data) => {
+  var currentDate = new Date();
+  client.get(`https://signal3.exacoin.co/get_signal?currency=${currency}&t=${currentDate.getTime()}`, args, (data) => {
     res.type('json')
     res.send(data);
   });

@@ -5,24 +5,25 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {Line} from 'react-chartjs-2';
 
 class BTCChart extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       intervalId: null,
       exacoinAPIResult: null,
+      selectedMarket: props.selectedMarket
     }
     this.getExacoinAPIResult = this.getExacoinAPIResult.bind(this);
   }
 
   componentDidMount() {
-
+    this.getExacoinAPIResult();
     const intervalId = setInterval(this.getExacoinAPIResult, 30000);
     this.setState({intervalId})
 
   }
 
   getExacoinAPIResult() {
-    axios.get(`/${this.props.selectedMarket.MarketName}`
+    axios.get(`/${this.state.selectedMarket.MarketName}`
     ) .then((response) => {
       this.setState({exacoinAPIResult: response.data})
     });
@@ -33,7 +34,16 @@ class BTCChart extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-
+    const {selectedMarket} = this.state;
+    if (nextProps.selectedMarket.MarketName !== selectedMarket.MarketName) {
+      clearInterval(this.state.intervalId);
+      selectedMarket.marketName = nextProps.selectedMarket.MarketName
+      this.setState({selectedMarket , exacoinAPIResult: null}, () => {
+        this.getExacoinAPIResult();
+        const intervalId = setInterval(this.getExacoinAPIResult, 30000);
+        this.setState({intervalId})
+      })
+    }
   }
 
   renderChart() {
