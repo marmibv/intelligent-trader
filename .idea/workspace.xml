@@ -33,8 +33,8 @@
       <file leaf-file-name="btc-chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/btc-chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+            <state relative-caret-position="275">
+              <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -80,10 +80,10 @@
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1515331677921" expanded="true" signature="2911383:2911392" ph="{...}" />
-                <marker date="1515331677921" expanded="true" signature="2911383:2911404" ph="[...]" />
-                <marker date="1515331677921" expanded="true" signature="2911385:2911390" ph="/*...*/" />
-                <marker date="1515331677921" expanded="true" signature="2911394:2911402" ph="/*...*/" />
+                <marker date="1515335938774" expanded="true" signature="2911604:2911613" ph="{...}" />
+                <marker date="1515335938774" expanded="true" signature="2911604:2911625" ph="[...]" />
+                <marker date="1515335938774" expanded="true" signature="2911606:2911611" ph="/*...*/" />
+                <marker date="1515335938774" expanded="true" signature="2911615:2911623" ph="/*...*/" />
               </folding>
             </state>
           </provider>
@@ -92,8 +92,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="375">
+              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -120,8 +120,8 @@
       <find>MarketCurrency</find>
       <find>dataCloseLength</find>
       <find>moment</find>
-      <find>marketListJSON</find>
       <find>LTC</find>
+      <find>marketListJSON</find>
       <find>exacoinAPIResult</find>
     </findStrings>
     <replaceStrings>
@@ -333,12 +333,12 @@
       <workItem from="1515244355848" duration="121000" />
       <workItem from="1515245836079" duration="14166000" />
       <workItem from="1515325008936" duration="601000" />
-      <workItem from="1515325847644" duration="5407000" />
+      <workItem from="1515325847644" duration="9203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20295000" />
+    <option name="totallyTimeSpent" value="24091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -414,10 +414,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515331677921" expanded="true" signature="2911383:2911392" ph="{...}" />
-            <marker date="1515331677921" expanded="true" signature="2911383:2911404" ph="[...]" />
-            <marker date="1515331677921" expanded="true" signature="2911385:2911390" ph="/*...*/" />
-            <marker date="1515331677921" expanded="true" signature="2911394:2911402" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911613" ph="{...}" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911625" ph="[...]" />
+            <marker date="1515335938774" expanded="true" signature="2911606:2911611" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911615:2911623" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -485,10 +485,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515331677921" expanded="true" signature="2911383:2911392" ph="{...}" />
-            <marker date="1515331677921" expanded="true" signature="2911383:2911404" ph="[...]" />
-            <marker date="1515331677921" expanded="true" signature="2911385:2911390" ph="/*...*/" />
-            <marker date="1515331677921" expanded="true" signature="2911394:2911402" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911613" ph="{...}" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911625" ph="[...]" />
+            <marker date="1515335938774" expanded="true" signature="2911606:2911611" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911615:2911623" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -547,10 +547,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1515331677921" expanded="true" signature="2911383:2911392" ph="{...}" />
-            <marker date="1515331677921" expanded="true" signature="2911383:2911404" ph="[...]" />
-            <marker date="1515331677921" expanded="true" signature="2911385:2911390" ph="/*...*/" />
-            <marker date="1515331677921" expanded="true" signature="2911394:2911402" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911613" ph="{...}" />
+            <marker date="1515335938774" expanded="true" signature="2911604:2911625" ph="[...]" />
+            <marker date="1515335938774" expanded="true" signature="2911606:2911611" ph="/*...*/" />
+            <marker date="1515335938774" expanded="true" signature="2911615:2911623" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -571,13 +571,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -589,18 +587,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/client/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="675">
+          <caret line="51" column="24" lean-forward="false" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/btc-chart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        <state relative-caret-position="275">
+          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -609,8 +609,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="375">
+          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding />
         </state>
       </provider>

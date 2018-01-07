@@ -1,4 +1,5 @@
 const express = require('express')
+const moment = require('moment');
 var Client = require('node-rest-client').Client;
 var client = new Client();
 const app = express()
@@ -22,8 +23,9 @@ app.get('/', (req, res) => {
 
 app.get('/:currency', (req, res) => {
   var currency = req.params.currency;
-  var currentDate = new Date();
-  client.get(`https://signal3.exacoin.co/get_signal?currency=${currency}&t=${currentDate.getTime()}`, args, (data) => {
+  const predictedTime = moment().valueOf();
+  console.log('Predicted time: ' + predictedTime);
+  client.get(`https://signal3.exacoin.co/get_signal?currency=${currency}&t=${predictedTime}`, args, (data) => {
     res.type('json')
     res.send(data);
   });

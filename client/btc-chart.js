@@ -55,9 +55,11 @@ class BTCChart extends React.Component {
         const dataDateList = [];
         exacoinChartData.data_date.forEach((data_date) => {
           const format = 'MM/DD HH:mm:ss';
-          const updateDataDate = moment.tz(data_date, 'Asia/Bangkok').format(format);
+          const dataDate = moment.tz(data_date, format, 'America/Los_Angeles').utc();
+          var updateDataDate = dataDate.zone(-420).format(format);
           dataDateList.push(updateDataDate);
         })
+        console.log(dataDateList)
         var data = {
           labels: dataDateList,
           datasets: [{

@@ -79954,7 +79954,7 @@ module.exports = toNumber;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(console) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -80053,9 +80053,11 @@ var BTCChart = function (_React$Component) {
           var dataDateList = [];
           exacoinChartData.data_date.forEach(function (data_date) {
             var format = 'MM/DD HH:mm:ss';
-            var updateDataDate = _momentTimezone2.default.tz(data_date, 'Asia/Bangkok').format(format);
+            var dataDate = _momentTimezone2.default.tz(data_date, format, 'America/Los_Angeles').utc();
+            var updateDataDate = dataDate.zone(-420).format(format);
             dataDateList.push(updateDataDate);
           });
+          console.log(dataDateList);
           var data = {
             labels: dataDateList,
             datasets: [{
@@ -80112,6 +80114,7 @@ var BTCChart = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = BTCChart;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 493 */
