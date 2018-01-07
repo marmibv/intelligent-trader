@@ -79954,7 +79954,7 @@ module.exports = toNumber;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(console) {
+
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -80015,6 +80015,7 @@ var BTCChart = function (_React$Component) {
     value: function getExacoinAPIResult() {
       var _this2 = this;
 
+      debugger;
       _axios2.default.get('/' + this.state.selectedMarket.MarketName).then(function (response) {
         _this2.setState({ exacoinAPIResult: response.data });
       });
@@ -80033,8 +80034,7 @@ var BTCChart = function (_React$Component) {
 
       if (nextProps.selectedMarket.MarketName !== selectedMarket.MarketName) {
         clearInterval(this.state.intervalId);
-        selectedMarket.marketName = nextProps.selectedMarket.MarketName;
-        this.setState({ selectedMarket: selectedMarket, exacoinAPIResult: null }, function () {
+        this.setState({ selectedMarket: nextProps.selectedMarket, exacoinAPIResult: null }, function () {
           _this3.getExacoinAPIResult();
           var intervalId = setInterval(_this3.getExacoinAPIResult, 30000);
           _this3.setState({ intervalId: intervalId });
@@ -80057,7 +80057,6 @@ var BTCChart = function (_React$Component) {
             var updateDataDate = dataDate.zone(-420).format(format);
             dataDateList.push(updateDataDate);
           });
-          console.log(dataDateList);
           var data = {
             labels: dataDateList,
             datasets: [{
@@ -80114,7 +80113,6 @@ var BTCChart = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = BTCChart;
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
 /* 493 */

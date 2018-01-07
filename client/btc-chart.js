@@ -23,6 +23,7 @@ class BTCChart extends React.Component {
   }
 
   getExacoinAPIResult() {
+    debugger;
     axios.get(`/${this.state.selectedMarket.MarketName}`
     ) .then((response) => {
       this.setState({exacoinAPIResult: response.data})
@@ -37,8 +38,7 @@ class BTCChart extends React.Component {
     const {selectedMarket} = this.state;
     if (nextProps.selectedMarket.MarketName !== selectedMarket.MarketName) {
       clearInterval(this.state.intervalId);
-      selectedMarket.marketName = nextProps.selectedMarket.MarketName
-      this.setState({selectedMarket , exacoinAPIResult: null}, () => {
+      this.setState({selectedMarket: nextProps.selectedMarket , exacoinAPIResult: null}, () => {
         this.getExacoinAPIResult();
         const intervalId = setInterval(this.getExacoinAPIResult, 30000);
         this.setState({intervalId})
@@ -59,7 +59,6 @@ class BTCChart extends React.Component {
           var updateDataDate = dataDate.zone(-420).format(format);
           dataDateList.push(updateDataDate);
         })
-        console.log(dataDateList)
         var data = {
           labels: dataDateList,
           datasets: [{

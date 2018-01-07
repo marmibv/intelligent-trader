@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
 app.get('/:currency', (req, res) => {
   var currency = req.params.currency;
   const predictedTime = moment().valueOf();
-  console.log('Predicted time: ' + predictedTime);
   client.get(`https://signal3.exacoin.co/get_signal?currency=${currency}&t=${predictedTime}`, args, (data) => {
     res.type('json')
     res.send(data);
