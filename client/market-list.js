@@ -2848,7 +2848,7 @@ export default [{
   "MarketCurrencyLong": "Bitcoin Cash",
   "BaseCurrencyLong": "Bitcoin",
   "MinTradeSize": 0.00294083,
-  "MarketName": "BTC-BCC",
+  "MarketName": "BTC-BCH",
   "IsActive": true,
   "Created": "2017-08-01T18:34:04.967",
   "Notice": null,
